@@ -19,7 +19,7 @@ body
     gap:5px;
     padding: 10px;
     color: white;
-    border: 4px solid rgba(13, 171, 76, 0.8); /* Outer glowing border */
+    border: 4px solid rgba(13, 171, 76, 0.8); 
     background-color: rgba(0, 0, 0, 0.3); 
     box-shadow: 0 0 15px #0f5c2e, 0 0 30px #085426, 0 0 60px #045022;
     width: 310px;
@@ -34,9 +34,9 @@ body
     align-items: center;
     font-size: 2rem;
     color: white;
-    background-color: rgba(0, 0, 0, 0.3); /* Transparent background for cells */
-    text-shadow: 0 0 10px rgba(0, 255, 102, 0.8); /* Glowing text */
-    border: 2px solid rgba(0, 255, 102, 0.8); /* Borders between cells */
+    background-color: rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.8); 
+    border: 2px solid rgba(0, 255, 102, 0.8);
     box-shadow: 0 0 20px rgba(0, 255, 102, 0.8);
     width: 100px;
     height: 100px;
@@ -79,8 +79,7 @@ button
     font-family: serif;
     font-size:x-large;
     box-shadow: 0 0 20px rgba(47, 68, 55, 0.8);
-
 }
 .occupied {
-    pointer-events: none; /* Prevent further clicks */
+    pointer-events: none; 
 }
