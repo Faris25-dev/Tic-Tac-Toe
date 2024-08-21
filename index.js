@@ -87,10 +87,15 @@ function winner() {
         gameover = true;
         h4.textContent = "Player 1 won!";
     } 
-    else if (cell1.textContent === "X" && cell4.textContent === "X" && cell7.textContent === "X") {
+    else if (cell1.textContent === "X" && cell4.textContent === "X" && cell7.textContent === "X") { //
         gameover = true;
         h4.textContent = "Player 1 won!";
     } 
+    else if (cell2.textContent === "X" && cell5.textContent === "X" && cell8.textContent === "X") { //
+        gameover = true;
+        h4.textContent = "Player 1 won!";
+    }
+
     else if (cell3.textContent === "X" && cell6.textContent === "X" && cell9.textContent === "X") {
         gameover = true;
         h4.textContent = "Player 1 won!";
@@ -103,12 +108,16 @@ function winner() {
         gameover = true;
         h4.textContent = "Player 1 won!";
     }
+    else if (cell4.textContent === "X" && cell5.textContent === "X" && cell6.textContent === "X") {
+        gameover = true;
+        h4.textContent = "Player 1 won!";
+    }
     else if (cell3.textContent === "X" && cell5.textContent === "X" && cell7.textContent === "X") {
         gameover = true;
         h4.textContent = "Player 1 won!";
     }
 
-    // Check for Player 2 ("O")
+ 
     else if (cell1.textContent === "O" && cell2.textContent === "O" && cell3.textContent === "O") {
         gameover = true;
         h4.textContent = "Player 2 won!";
@@ -133,7 +142,22 @@ function winner() {
         gameover = true;
         h4.textContent = "Player 2 won!";
     }
+    else if (cell1.textContent === "O" && cell4.textContent === "O" && cell7.textContent === "O") { //
+        gameover = true;
+        h4.textContent = "Player 1 won!";
+    } 
+    else if (cell2.textContent === "O" && cell5.textContent === "O" && cell8.textContent === "O") { //
+        gameover = true;
+        h4.textContent = "Player 1 won!";
+    }
+    else if (cell4.textContent === "O" && cell5.textContent === "O" && cell6.textContent === "O") {
+        gameover = true;
+        h4.textContent = "Player 1 won!";
+    }
 }
+
+
+
 
 cell1.onclick= ()=> handleclick(cell1)
 cell2.onclick= ()=> handleclick(cell2)
@@ -144,3 +168,6 @@ cell6.onclick= ()=> handleclick(cell6)
 cell7.onclick= ()=> handleclick(cell7)
 cell8.onclick= ()=> handleclick(cell8)
 cell9.onclick= ()=> handleclick(cell9)
+
+
+
