@@ -15,6 +15,7 @@ const h4=document.getElementById("he4");
 let turn=true; // true for X and false for O//
 let gameover=false;
 let start1=false;
+let reset1=true;
 
 reset.onclick=function()
 {
@@ -25,12 +26,19 @@ reset.onclick=function()
     }
     turn=true;
     h4.textContent="";
+    reset1=true;
    
 }
 start.onclick=function()
 {
+    if (reset1==false)
+    {
+        window.alert("Reset the board to start!");
+        return;
+    }
     h4.textContent="Player 1 turn!";
     start1=true;
+    
 }
 function handleclick(cell)
 {
@@ -53,7 +61,7 @@ function handleclick(cell)
                 cell.classList.add('occupied');
                 h4.textContent="Player 2 turn!";
                 turn=!turn;
-                
+                reset1=false;
             }
             else
             {
@@ -62,7 +70,7 @@ function handleclick(cell)
                 h4.textContent="Player 1 turn!";
                 cell.classList.add('occupied');
                 turn=!turn;
-                
+                reset1=false;
             } 
             
         }
@@ -127,9 +135,6 @@ function winner() {
     }
 }
 
-
-
-
 cell1.onclick= ()=> handleclick(cell1)
 cell2.onclick= ()=> handleclick(cell2)
 cell3.onclick= ()=> handleclick(cell3)
@@ -139,6 +144,3 @@ cell6.onclick= ()=> handleclick(cell6)
 cell7.onclick= ()=> handleclick(cell7)
 cell8.onclick= ()=> handleclick(cell8)
 cell9.onclick= ()=> handleclick(cell9)
-
-
-
