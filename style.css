@@ -15,7 +15,7 @@ body
     display: grid;
     grid-template-columns: repeat(3, 100px); 
     grid-template-rows: repeat(3, 100px); 
-    /* margin-top: 220px; */
+    margin: 0;
     gap:5px;
     padding: 10px;
     color: white;
@@ -25,6 +25,7 @@ body
     width: 310px;
     height: 310px;
     border-radius: 10px;
+    
 }
 .cell {
     
@@ -40,12 +41,46 @@ body
     width: 100px;
     height: 100px;
 }
-.x{
-    color: #FF0000; /* Red color for X */
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Glowing effect for X */
+.cell.x {
+    color: red; 
+    font-size: 3em; 
+    font-weight: bold; 
 }
 
-.o {
-    color: #0000FF; /* Blue color for O */
-    text-shadow: 0 0 10px rgba(0, 0, 255, 0.8); /* Glowing effect for O */
+.cell.o {
+    color: rgb(255, 255, 255); 
+    font-size: 3em; 
+    font-weight: bold; 
+}
+#he4
+{
+margin-left: 85px;
+margin-bottom: 10px;
+font-family: serif;
+
+}
+.box2
+{
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+button
+{
+    
+    display: block;
+    margin-left: 35px;
+    margin-top: 5px;
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    color: rgb(255, 0, 0);
+    font-family: serif;
+    font-size:x-large;
+    box-shadow: 0 0 20px rgba(47, 68, 55, 0.8);
+
+}
+.occupied {
+    pointer-events: none; /* Prevent further clicks */
 }
