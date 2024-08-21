@@ -8,24 +8,37 @@ const cell7=document.getElementById("cell7");
 const cell8=document.getElementById("cell8");
 const cell9=document.getElementById("cell9");
 const reset=document.getElementById("reset");
+const start=document.getElementById("start");
 const allcell=document.getElementsByClassName("cell");
 const h4=document.getElementById("he4");
 
-let turn=true;
+let turn=true; // true for X and false for O//
 let gameover=false;
+let start1=false;
 
 reset.onclick=function()
 {
     for (let i = 0; i < allcell.length; i++) {
         allcell[i].textContent = ""; 
-        allcell[i].classList.remove('occupied');
+        allcell[i].classList.remove('occupied', 'x', 'o');
         gameover=false;
     }
     turn=true;
     h4.textContent="";
+   
+}
+start.onclick=function()
+{
+    h4.textContent="Player 1 turn!";
+    start1=true;
 }
 function handleclick(cell)
 {
+    if (start1==false)
+    {
+        window.alert("You need to click the start button to start!");
+        return;
+    }
     if (gameover==true || cell.textContent !== "")
     {
         return;
@@ -33,16 +46,20 @@ function handleclick(cell)
     
     if (cell.textContent==="")
         {
-            if (turn==true)
+            if (turn)
             {
+                cell.classList.add('x');
                 cell.textContent="X";
                 cell.classList.add('occupied');
+                h4.textContent="Player 2 turn!";
                 turn=!turn;
                 
             }
             else
             {
+                cell.classList.add('o');
                 cell.textContent="O";
+                h4.textContent="Player 1 turn!";
                 cell.classList.add('occupied');
                 turn=!turn;
                 
